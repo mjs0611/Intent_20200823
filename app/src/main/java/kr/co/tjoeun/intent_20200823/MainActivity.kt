@@ -18,5 +18,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+//        메세지 전달 버튼이 눌리면
+        sendMessageBtn.setOnClickListener {
+
+            val inputMessage = messageEdt.text.toString()
+
+            val myIntent = Intent(this, MessageActivity::class.java)
+
+            myIntent.putExtra("message", inputMessage)
+
+            startActivity(myIntent)
+
+        }
+
     }
 }
