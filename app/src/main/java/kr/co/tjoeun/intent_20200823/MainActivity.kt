@@ -88,6 +88,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+
+        naverWebLinkBtn.setOnClickListener {
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        kakaoPlayStoreLinkBtn.setOnClickListener {
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
     }
 
 //    결과를 가지고 돌아올 때 실행되는 함수
