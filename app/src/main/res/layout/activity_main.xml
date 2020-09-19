@@ -28,4 +28,14 @@
         android:layout_height="wrap_content"
         android:text="메세지를 다른 화면에 전달하기" />
 
+    <Textview>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    </Textview>
+
+    <Textview>
+        android:layout_width="0dp"
+        android:layout_height=""
+    </Textview>
+
 </LinearLayout>
