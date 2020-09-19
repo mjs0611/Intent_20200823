@@ -63,6 +63,19 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+//        Call 액샨 예제 => 실행 불가
+
+        callBtn.setOnClickListener {
+
+            val inputPhoneNum = phoneNumEdt.text.toString()
+
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+
+        }
+
+
     }
 
 //    결과를 가지고 돌아올 때 실행되는 함수
@@ -81,7 +94,7 @@ class MainActivity : AppCompatActivity() {
 
 //                둘다 맞아야만 닉네임을 (다른화면에서 입력해준 값으로) 변경처리
 
-                val newNickName = data.getStringExtra("nick")
+                val newNickName = data?.getStringExtra("nick")
 
                 nickNameTxt.text = newNickName
 
